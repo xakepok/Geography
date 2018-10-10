@@ -3,3 +3,4 @@
 * Apache 2.4
 * PHP 7.2
 * Joomla 3.8+
+* MySQL 5.7
