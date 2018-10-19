@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_GEOGRAPHY_MENU_ADD_COUNTRY">
+        <message>
+            <![CDATA[COM_GEOGRAPHY_MENU_ADD_COUNTRY_DESC]]>
+		</message>
+    </layout>
+    <fieldset name="request">
+        <fields name="request">
+            <field
+                    name="id"
+                    type="hidden"
+                    default="0"
+            />
+        </fields>
+    </fieldset>
+</metadata>

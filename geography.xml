@@ -7,7 +7,7 @@
 	<authorUrl>http://xakepok.com</authorUrl>
 	<copyright>A copyright</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<description>COM_GEOGRAPHY_XML_DESCRIPTION</description>
 
 	<!-- Scripts to run on installation -->
@@ -74,6 +74,6 @@
 
 	<!-- Update servers -->
 	<updateservers>
-		<server type="extension" priority="1" name="geography">http://xakepok.com/Thrid/updates/geography.xml</server>
+		<server type="extension" priority="1" name="geography">http://www.xakepok.com/Thrid/updates/geography.xml</server>
 	</updateservers>
 </extension>
