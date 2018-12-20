@@ -1,5 +1,4 @@
 <?php
-use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\MVC\View\HtmlView;
 
@@ -33,19 +32,19 @@ class GeographyViewCountries extends HtmlView
 	{
 		JToolBarHelper::title(Text::_('COM_GEOGRAPHY_TITLE_COUNTRIES'), '');
 
-        if (Factory::getUser()->authorise('core.create', 'com_geography'))
+        if (GeographyHelper::canDo('core.create'))
         {
             JToolbarHelper::addNew('country.add');
         }
-        if (Factory::getUser()->authorise('core.edit', 'com_geography'))
+        if (GeographyHelper::canDo('core.edit'))
         {
             JToolbarHelper::editList('country.edit');
         }
-        if ($this->state->get('filter.state') == -2 && Factory::getUser()->authorise('core.delete', 'com_geography'))
+        if ($this->state->get('filter.state') == -2 && GeographyHelper::canDo('core.delete'))
         {
             JToolbarHelper::deleteList('', 'countries.delete');
         }
-        if (Factory::getUser()->authorise('core.edit.state', 'com_geography'))
+        if (GeographyHelper::canDo('core.edit.state'))
         {
             JToolbarHelper::divider();
             JToolbarHelper::publish('countries.publish', 'JTOOLBAR_PUBLISH', true);
@@ -53,7 +52,7 @@ class GeographyViewCountries extends HtmlView
             JToolBarHelper::archiveList('countries.archive');
             JToolBarHelper::trash('countries.trash');
         }
-		if (Factory::getUser()->authorise('core.admin', 'com_geography'))
+		if (GeographyHelper::canDo('core.admin'))
 		{
 			JToolBarHelper::preferences('com_geography');
 		}

@@ -8,15 +8,12 @@ $listDirn    = $this->escape($this->state->get('list.direction'));
         <input type="checkbox" name="checkall-toggle" value="" title="<?php echo JText::_('JGLOBAL_CHECK_ALL'); ?>" onclick="Joomla.checkAll(this)" />
     </th>
     <th width="5%">
-        <?php echo JHtml::_('grid.sort', 'JSTATUS', '`state`', $listDirn, $listOrder); ?>
+        <?php echo JHtml::_('grid.sort', 'JSTATUS', 'state', $listDirn, $listOrder); ?>
     </th>
     <th>
-        <?php echo JHtml::_('grid.sort', 'COM_GEOGRAPHY_HEAD_NAME', '`name`', $listDirn, $listOrder); ?>
+        <?php echo JHtml::_('grid.sort', 'COM_GEOGRAPHY_HEAD_NAME', 'name', $listDirn, $listOrder); ?>
     </th>
     <th>
-        <?php echo JHtml::_('grid.sort', 'COM_GEOGRAPHY_HEAD_NAME', '`country`', $listDirn, $listOrder); ?>
-    </th>
-    <th width="1%">
-        <?php echo JHtml::_('grid.sort', 'ID', '`id`', $listDirn, $listOrder); ?>
+        <?php echo JHtml::_('grid.sort', 'COM_GEOGRAPHY_TITLE_COUNTRY', 'country', $listDirn, $listOrder); ?>
     </th>
 </tr>

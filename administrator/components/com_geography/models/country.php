@@ -8,6 +8,11 @@ class GeographyModelCountry extends AdminModel {
         return JTable::getInstance($name, $prefix, $options);
     }
 
+    public function publish(&$pks, $value = 1)
+    {
+        return parent::publish($pks, $value);
+    }
+
     public function getForm($data = array(), $loadData = true)
     {
         $form = $this->loadForm(

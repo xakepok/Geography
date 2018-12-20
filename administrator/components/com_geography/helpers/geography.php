@@ -11,4 +11,16 @@ class GeographyHelper
 		JHtmlSidebar::addEntry(Text::_('COM_GEOGRAPHY_MENU_REGIONS'), 'index.php?option=com_geography&view=regions', $vName == 'regions');
 		JHtmlSidebar::addEntry(Text::_('COM_GEOGRAPHY_MENU_CITIES'), 'index.php?option=com_geography&view=cities', $vName == 'cities');
 	}
+
+    /**
+     * Проверяет права текеущего пользователя
+     * @param string $action название прав
+     * @param string $component название компонента
+     * @return bool
+     * @since 1.1.2
+     */
+	public static function canDo(string $action, string $component = 'com_geography'): bool
+    {
+        return JFactory::getUser()->authorise($action, $component);
+    }
 }

@@ -11,6 +11,7 @@ class TableGeographyCities extends Table
 	public function __construct(JDatabaseDriver $db)
 	{
 		parent::__construct('#__grph_cities', 'id', $db);
+        $this->setColumnAlias('published', 'state');
 	}
 
 

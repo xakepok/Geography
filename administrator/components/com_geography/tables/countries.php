@@ -10,6 +10,7 @@ class TableGeographyCountries extends Table
 	public function __construct(JDatabaseDriver $db)
 	{
 		parent::__construct('#__grph_countries', 'id', $db);
+        $this->setColumnAlias('published', 'state');
 	}
 
 

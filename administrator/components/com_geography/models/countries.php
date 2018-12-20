@@ -57,8 +57,8 @@ class GeographyModelCountries extends ListModel
         $result = array();
         foreach ($items as $item) {
             $arr['id'] = $item->id;
-            $url = JRoute::_("index.php?option=com_geography&amp;view=country&amp;layout=edit&amp;id={$item->id}");
-            $link = JHtml::link($url, $item->name);
+            $url = JRoute::_("index.php?option=com_geography&amp;task=country.edit&amp;id={$item->id}");
+            $link = (!GeographyHelper::canDo('core.edit')) ? $item->name : JHtml::link($url, $item->name);
             $arr['name'] = $link;
             $arr['state'] = $item->state;
             $result[] = $arr;

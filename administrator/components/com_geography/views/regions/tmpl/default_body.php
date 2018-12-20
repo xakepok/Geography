@@ -2,7 +2,7 @@
 // Запрет прямого доступа.
 defined('_JEXEC') or die;
 foreach ($this->items as $i => $item) :
-    $canChange = JFactory::getUser()->authorise('core.edit.state', 'com_geography.region.' . $item['id']);
+    $canChange = GeographyHelper::canDo('core.edit.state', 'com_geography.region.' . $item['id']);
     ?>
     <tr class="row0">
         <td class="center">
@@ -15,7 +15,7 @@ foreach ($this->items as $i => $item) :
             <?php echo $item['name'];?>
         </td>
         <td>
-            <?php echo $item['id']; ?>
+            <?php echo $item['country']; ?>
         </td>
     </tr>
 <?php endforeach; ?>
