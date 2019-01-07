@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<form addrulepath="/administrator/components/com_geography/models/rules">
+<form addrulepath="/administrator/components/com_licensing/models/rules">
     <fieldset name="names">
         <field
                 name="id"

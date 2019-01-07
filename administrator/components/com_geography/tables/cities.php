@@ -6,6 +6,7 @@ class TableGeographyCities extends Table
 {
     var $id = null;
     var $region_id = null;
+    var $is_capital = null;
     var $name = null;
     var $state = null;
 	public function __construct(JDatabaseDriver $db)

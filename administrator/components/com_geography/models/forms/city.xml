@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<form addrulepath="/administrator/components/com_geography/models/rules">
+<form addrulepath="/administrator/components/com_licensing/models/rules">
     <fieldset name="names">
         <field
                 name="id"
@@ -21,6 +21,17 @@
                 description="COM_GEOGRAPHY_HEAD_REGION_NAME_DESC"
                 class="input-xlarge"
         />
+        <field
+                name="is_capital"
+                type="radio"
+                class="btn-group btn-group-yesno"
+                default="0"
+                label="COM_GEOGRAPHY_TITLE_IS_CAPITAL"
+                description="COM_GEOGRAPHY_TITLE_IS_CAPITAL_DESC"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
         <field
                 name="state"
                 type="list"
